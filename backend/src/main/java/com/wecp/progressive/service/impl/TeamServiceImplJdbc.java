@@ -2,10 +2,17 @@ package com.wecp.progressive.service.impl;
 
 import java.util.List;
 
+import com.wecp.progressive.dao.TeamDAO;
 import com.wecp.progressive.entity.Team;
 import com.wecp.progressive.service.TeamService;
 
 public class TeamServiceImplJdbc implements TeamService  {
+    private TeamDAO teamDAO;
+    
+
+    public TeamServiceImplJdbc(TeamDAO teamDAO) {
+        this.teamDAO = teamDAO;
+    }
 
     @Override
     public List<Team> getAllTeams() {
@@ -22,4 +29,17 @@ public class TeamServiceImplJdbc implements TeamService  {
         return List.of();
     }
 
+    @Override
+    public Team getTeamById(int teamId){
+        return null;
+    }
+    @Override
+    public void updateTeam(Team team){
+
+    }
+
+    @Override
+    public void deleteTeam(int teamId){
+        
+    }
 }
